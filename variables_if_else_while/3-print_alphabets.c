@@ -1,22 +1,24 @@
 #include <stdio.h>
 /**
  *main - entry
- *Return:success
+ *Return: 0 succes
  */
 
 int main(void)
 {
-char alph = 'a';
+	char alph = 'a';
+	char alph_ = 'A';
 
-while (alph <= 'z')
-{
-	if (alph != 'q' && alph != 'e')
+	while (alph <= 'z')
 	{
 	putchar(alph);
-	}
-
 	alph++;
-}
+	}
+	while (alph_ <= 'Z')
+	{
+	putchar(alph_);
+	alph_++;
+	}
 	putchar('\n');
 	return (0);
 }
