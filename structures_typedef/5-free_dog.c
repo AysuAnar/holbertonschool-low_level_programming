@@ -1,20 +1,20 @@
+/*
+ * File: 5-free_dog.c
+ */
+
 #include "dog.h"
 #include <stdlib.h>
 
 /**
- * free_dog - frees previously allocated memory
- * @d: pointer to allocated memery to free
- *
- * Return: void.
+ * free_dog - Frees dogs.
+ * @d: The dog to be freed.
  */
 void free_dog(dog_t *d)
 {
-	if (d)
-	{
-		if (d->name)
-			free(d->name);
-		if (d->owner)
-			free(d->owner);
-		free(d);
-	}
+	if (d == NULL)
+		return;
+
+	free(d->owner);
+	free(d->name);
+	free(d);
 }
